@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>BZOJ1005 HNOI2008 明明的烦恼 | CODEPLAY0314</title><meta name="keywords" content="OI,ACM,算法,高中,BZOJ,prufer,组合数学"><meta name="author" content="Codeplay0314"><meta name="copyright" content="Codeplay0314"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="题解代码">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BZOJ1005 HNOI2008 明明的烦恼">
+<meta property="og:url" content="http://codeplay0314.com/OI&ACM/solutions/BZOJ1005/index.html">
+<meta property="og:site_name" content="CODEPLAY0314">
+<meta property="og:description" content="题解代码">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2015-06-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-06-21T16:00:00.000Z">
+<meta property="article:author" content="Codeplay0314">
+<meta property="article:tag" content="BZOJ">
+<meta property="article:tag" content="prufer编码">
+<meta property="article:tag" content="组合数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://codeplay0314.com/OI&amp;ACM/solutions/BZOJ1005/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'BZOJ1005 HNOI2008 明明的烦恼',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2015-06-22 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="CODEPLAY0314" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">67</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CODEPLAY0314</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">BZOJ1005 HNOI2008 明明的烦恼</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><h1>Description</h1>
+<p>自从明明学了树的结构,就对奇怪的树产生了兴趣… 给出标号为1到N的点,以及某些点最终的度数,允许在任意两点间连线,可产生多少棵度数满足要求的树?</p>
+<h1>Input</h1>
+<p>第一行为N(0 &lt; N &lt;= 1000),接下来N行,第i+1行给出第i个节点的度数D<sub>i</sub>,如果对度数不要求,则输入-1.</p>
+<h1>Output</h1>
+<p>一个整数,表示不同的满足要求的树的个数,无解输出0.</p>
+<h1>Sample Input</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1</span><br><span class="line">-1</span><br><span class="line">-1</span><br></pre></td></tr></table></figure>
+<h1>Sample Output</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h1>HINT</h1>
+<p>两棵树分别为1 - 2 - 3; 1 - 3 - 2</p>
+<h1>Solutions</h1>
+<p>一道比较简单的组合数学题。</p>
+<p>首先我们要了解一下Prufer Sequence(普吕弗序列)（内容摘自zyj PPT）.</p>
+<p>Prufer Sequence是一个和某棵结点数为n的树唯一对应的一个长度为n-2的整数序列。定义如下：</p>
+<p>假定已知的n个顶点标志为1,2,…,n，假定T是其中的一棵树。设a1为叶节点中有标号最小者，与a1连接的点为b1，从T中消去点a1和边（a1,b1），再从余下的数T1中寻找标号最小的叶节点，设为a2，a2的邻接点为b2，从从T1中消去点a2和边（a2,b2）。如此步骤n-2次，直到最后剩下一条边为止。于是一棵树T对应一序列：b1,b2,…,bn-2<br>
+这些数是1~n中的数，并且允许重复。</p>
+<p>相反地，用b1,b2…bn-2可以恢复树T本身，因为消去的是树叶中标号最小的，而且它和b1是邻接的。<br>
+即给出一序列b1,b2,…,bn-2，其中1&lt;=bi&lt;=n，i=1,2,…,n-2.可恢复与之对应的树，方法如下：<br>
+有两个序列，一个是(1)1,2,…,n，另一个是(2)b1,b2,…,bn-2<br>
+在序列(1)中找出第一个不出现在序列(2)b1,b2,…,bn-2中的数，这个数显然便是a1，同时形成边(a1,b1)，并从(1)中消去a1,从(2)中消去b1。在余下的(1)和(2)中继续以上的步骤n-2次，直到序列(2)为空集为止。这时序列(1)中剩下的两个数x,y，边(x,y)就是树T的最后一条边。</p>
+<p>看不懂？ 来看个栗子</p>
+<p>树T</p>
+<p><img src="/image/posts/solutions/BZOJ1005/1.jpg" alt=""></p>
+<p>找编号最小的节点，为2，与他相连的为3，将3加入序列</p>
+<p><img src="/image/posts/solutions/BZOJ1005/2.jpg" alt=""></p>
+<p>消掉点2和边（2，3），找到当前编号最小的节点，为3，与他相连的为1，将1加入序列</p>
+<p><img src="/image/posts/solutions/BZOJ1005/3.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/4.jpg" alt=""></p>
+<p>重复这个操作</p>
+<p><img src="/image/posts/solutions/BZOJ1005/5.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/6.jpg" alt=""></p>
+<p>… 直到最后得到这个序列</p>
+<p><img src="/image/posts/solutions/BZOJ1005/7.jpg" alt=""></p>
+<p>同样，我们用这个序列恢复这棵树</p>
+<p>现有（1，7）之前并未消去<br>
+<img src="/image/posts/solutions/BZOJ1005/8.jpg" alt=""></p>
+<p>开始操作<br>
+<img src="/image/posts/solutions/BZOJ1005/9.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/10.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/11.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/12.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/13.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/14.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/15.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/16.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/17.jpg" alt=""></p>
+<p><img src="/image/posts/solutions/BZOJ1005/18.jpg" alt=""></p>
+<p>这样很容易看出，每一个Prufer Sequence对应一颗唯一的树（一一对应）。</p>
+<hr>
+<p>回到题目中来。</p>
+<p>我们发现，树中结点的度和结点号在此序列中出现的次数有关(结点i在序列中出现的次数=degree[i]-1).</p>
+<p>由题意，有题目给出度数的限制，同时也就限制了序列的一些条件。树的所有可能情况也就是序列可能的情况。</p>
+<p>设度数没有限制的点的数量为num,有限制的点在序列中出现的总次数为sum</p>
+<p>可知，n-num个没有限制的点在序列中的排列总情况为</p>
+<p><img src="/image/posts/solutions/BZOJ1005/19.jpg" alt=""></p>
+<p>（从n-2个位置选sum个位置填充这些数*排列方式为多重集的全排列方案数）</p>
+<p>剩下n-sum-2 个位置可由num个数填充，方案数为</p>
+<p><img src="/image/posts/solutions/BZOJ1005/20.jpg" alt=""></p>
+<p>所以答案为</p>
+<p><img src="/image/posts/solutions/BZOJ1005/21.jpg" alt=""></p>
+<p>因为可能爆long long，用分解质因数求以下就可以了。</p>
+<p>然后答案也比较畸形，要用高精度，好像要开3000位，不然就神作了。</p>
+<p>注意当任意degree=0时是无解的。</p>
+<p>另外，当sum&gt;n-2同样也是无解的。</p>
+<p>注意特判n=1的情况，if(degree[1]=0) ans=1, else ans=0;</p>
+<p>然后就可以愉快的AC辣–</p>
+<p>附一段代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">readint</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>; <span class="keyword">char</span> c=<span class="built_in">getchar</span>();  <span class="keyword">bool</span> minu=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c) &amp;&amp; c!= <span class="string">&#x27;-&#x27;</span>) c=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>) minu=<span class="literal">true</span>; <span class="keyword">else</span> x=c-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c=<span class="built_in">getchar</span>())) x=(x*<span class="number">10</span>)+c-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> minu?-x:x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> degree[maxn];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> form[maxn],prime[maxn],facnum[maxn],cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MakePrimeList</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;                          </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) <span class="keyword">if</span>(!form[i])&#123;</span><br><span class="line">	    prime[cnt++]=i;</span><br><span class="line">	    <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;=n;j+=i) form[j]=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">pow</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">int</span> n)</span></span>&#123;						<span class="comment">//递推快速幂</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(n&amp;<span class="number">1</span>) ans*=a;</span><br><span class="line">		a*=a; n&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fac</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> t)</span></span>&#123;									<span class="comment">//分解质因数</span></span><br><span class="line">    <span class="keyword">if</span>(!x || !t) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)</span><br><span class="line">		<span class="keyword">while</span>(!(x%prime[i])) facnum[i]+=t,x/=prime[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans[<span class="number">3000</span>]=&#123;<span class="number">1</span>&#125;,digit=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++) <span class="keyword">if</span>(facnum[i])&#123;</span><br><span class="line">	    <span class="keyword">int</span> x=<span class="number">0</span>;</span><br><span class="line">	    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;facnum[i];k++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;digit;j++) ans[j]*=prime[i];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;digit;j++)&#123;</span><br><span class="line">			    ans[j]+=x;</span><br><span class="line">			    x=ans[j]/<span class="number">10</span>;</span><br><span class="line">			    ans[j]%=<span class="number">10</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">while</span>(x) ans[digit++]=x%<span class="number">10</span>,x/=<span class="number">10</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n=<span class="built_in">readint</span>(),sum=<span class="number">0</span>,num=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">MakePrimeList</span>(maxn);</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">readint</span>()) <span class="built_in">putchar</span>(<span class="string">&#x27;0&#x27;</span>);  <span class="keyword">else</span> <span class="built_in">putchar</span>(<span class="string">&#x27;1&#x27;</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		degree[i]=<span class="built_in">readint</span>();</span><br><span class="line">		<span class="keyword">if</span>(!degree[i]) &#123; <span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(degree[i]==<span class="number">-1</span>) num++;</span><br><span class="line">		<span class="keyword">else</span> sum+=degree[i]<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(sum&gt;n<span class="number">-2</span>) &#123; <span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>); <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">    <span class="built_in">fac</span>(num,n-sum<span class="number">-2</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n-sum<span class="number">-1</span>;i&lt;=n<span class="number">-2</span>;i++) <span class="built_in">fac</span>(i,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(degree[i]!=<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;degree[i];j++) <span class="built_in">fac</span>(j,<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">count</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=digit<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) <span class="built_in">putchar</span>(ans[i]+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后 <strong>BZOJ11211</strong> 就是简化了的题目了(建议先完成)</p>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2015 - 2022 By Codeplay0314</div><div class="footer_custom_text">Homepage pictures from <a target="_blank" rel="noopener" href="https://beyondvisuals.hk/">Beyond Visuals</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://codeplay0314.com/OI&ACM/solutions/BZOJ1005/index.html'
+    this.page.identifier = 'OI&ACM/solutions/BZOJ1005/index.html'
+    this.page.title = 'BZOJ1005 HNOI2008 明明的烦恼'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://codeplay0314.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Disqus' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

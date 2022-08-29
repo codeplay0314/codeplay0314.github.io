@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>算法竞赛 | Programming Contest | CODEPLAY0314</title><meta name="keywords" content="OI,ACM,算法,数据结构,高中"><meta name="author" content="Codeplay0314"><meta name="copyright" content="Codeplay0314"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="My OI and ACM-ICPC experience">
+<meta property="og:type" content="website">
+<meta property="og:title" content="算法竞赛 | Programming Contest">
+<meta property="og:url" content="http://codeplay0314.com/OI&ACM/index.html">
+<meta property="og:site_name" content="CODEPLAY0314">
+<meta property="og:description" content="My OI and ACM-ICPC experience">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-02-01T05:07:54.032Z">
+<meta property="article:modified_time" content="2022-01-31T12:36:56.254Z">
+<meta property="article:author" content="Codeplay0314">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://codeplay0314.com/OI&amp;ACM/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法竞赛 | Programming Contest',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-01-31 20:36:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="CODEPLAY0314" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">67</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CODEPLAY0314</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">算法竞赛 | Programming Contest</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><p>I have 8 years of programming contest experience from 2014 to 2021, which includes the Olympiad in Informatics  (<strong>OI</strong>, for high school students) and the International Collegiate Programming Contest (<strong>ICPC</strong>, for undergraduates). These are the significant accolades that I won during this journey:</p>
+<ul>
+<li><strong>Silver Medal</strong> in the 2020 ICPC Asia-East Continent Final Contest, Feb. 2021</li>
+<li><strong>Gold Medal</strong> in the 2020 ICPC Asia Regional (Shanghai), Dec. 2020</li>
+<li><strong>First Prize</strong> of the Fudan University Programming Competition (the 5th place), Nov. 2018</li>
+<li><strong>First Prize</strong> of the National Olympiad in Informatics in Hunan Provinces (NOIP 2016), Dec. 2016</li>
+</ul>
+<p>I would like to share some of my notes (mainly in mandarin) for algorithms and data structures, as well as some of the solutions to valuable problems here.</p>
+<h3 id="Algorithms-and-data-structures">Algorithms and data structures</h3>
+<ul>
+<li><a href="/articles/2015-08-09/tree/">树相关 | Trees</a></li>
+<li><a href="/articles/2015-06-18/graph/">图论专题总结 | Graphs</a></li>
+<li><a href="/articles/2015-08-17/string/">字符串相关 | Strings</a></li>
+<li><a href="/articles/2015-10-07/linked-list/">链表 | Linked List</a></li>
+<li><a href="/articles/2015-10-10/stack-and-queue-advanced/">栈和队列（进阶） | Stacks and queues (advanced)</a></li>
+<li><a href="/articles/2015-05-17/hash/">哈希专题总结 | Hash</a></li>
+<li><a href="/articles/2015-09-02/permutation">置换及其应用 | Permutation</a></li>
+<li><a href="/articles/2015-09-07/matrix-and-guess_elimination/">矩阵乘法和高斯消元 | Matrix multiplication and Gaussian elimination</a></li>
+<li><a href="/articles/2015-06-21/8-questions-of-combinatorial-mathematics/">组合数学八题 | Eight questions of combinatorics</a></li>
+<li><a href="/articles/2015-10-18/disjoint-set">并查集 | Disjoint-set</a></li>
+<li><a href="/articles/2015-04-19/kmp/">KMP算法 | Knuth–Morris–Pratt algorithm</a></li>
+</ul>
+<h3 id="Self-made-questions">Self-made questions</h3>
+<ul>
+<li><a href="/articles/2015-10-23/Simple-or-Naive">Simple or Naive | 自制NOIP模拟题</a></li>
+</ul>
+<h3 id="Solutions-to-problems-on-BZOJ">Solutions to problems on BZOJ</h3>
+<ul>
+<li><a href="/OI&amp;ACM/solutions/BZOJ1005">1005 HNOI2008 明明的烦恼</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ1468">1468 Tree</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ2301">2301 Problem b</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ2339">2339 HNOI2011 卡农</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ2440">2440 完全平方数</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ3626">3626 LNOI2014 LCA</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ3884">3884 上帝与集合的正确用法</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ3997">3997 组合数学</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ4008">4008 HNOI2015 亚瑟王</a></li>
+<li><a href="/OI&amp;ACM/solutions/BZOJ-Combinatorial-Mathematics">组合数学合集</a></li>
+</ul>
+<h3 id="Solutions-to-Codeforces-contest">Solutions to Codeforces contest</h3>
+<ul>
+<li><a href="/OI&amp;ACM/solutions/CF309">Codeforces Round #309 (Div. 2)</a></li>
+<li><a href="/OI&amp;ACM/solutions/CF310">Codeforces Round #310 (Div. 2)</a></li>
+<li><a href="/OI&amp;ACM/solutions/CF321">Codeforces Round #321 (Div. 2)</a></li>
+<li><a href="/OI&amp;ACM/solutions/CF323">Codeforces Round #323 (Div. 2)</a></li>
+</ul>
+<h3 id="Solutions-to-training-tests">Solutions to training tests</h3>
+<ul>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-06-24">2015/6/24 数学小考 | All-math test on 2015-06-24</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-09-22">NOIP2015 - 模拟考试Ⅰ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-09-25">NOIP2015 - 模拟考试Ⅱ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-09-29">NOIP2015 - 模拟考试Ⅲ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-10-04">NOIP2015 - 模拟考试Ⅴ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-10-07">NOIP2015 - 模拟考试Ⅵ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-10-12">NOIP2015 - 模拟考试Ⅶ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-10-15">NOIP2015 - 模拟考试Ⅷ</a></li>
+<li><a href="/OI&amp;ACM/solutions/TEST-2015-10-22">NOIP2015 - 模拟考试Ⅹ</a></li>
+</ul>
+<h3 id="Solutions-to-problems-on-USACO">Solutions to problems on USACO</h3>
+<ul>
+<li><a href="/OI&amp;ACM/solutions/USACO">USACO Training</a></li>
+</ul>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2015 - 2022 By Codeplay0314</div><div class="footer_custom_text">Homepage pictures from <a target="_blank" rel="noopener" href="https://beyondvisuals.hk/">Beyond Visuals</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://codeplay0314.com/OI&ACM/index.html'
+    this.page.identifier = 'OI&ACM/index.html'
+    this.page.title = '算法竞赛 | Programming Contest'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://codeplay0314.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Disqus' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

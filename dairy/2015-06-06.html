@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>随记 | 2015.06.06 | CODEPLAY0314</title><meta name="keywords" content="日记,OI,高中"><meta name="author" content="Codeplay0314"><meta name="copyright" content="Codeplay0314"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="题解代码">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随记 | 2015.06.06">
+<meta property="og:url" content="http://codeplay0314.com/dairy/2015-06-06.html">
+<meta property="og:site_name" content="CODEPLAY0314">
+<meta property="og:description" content="题解代码">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2015-06-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-06-05T16:00:00.000Z">
+<meta property="article:author" content="Codeplay0314">
+<meta property="article:tag" content="dairy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://codeplay0314.com/dairy/2015-06-06"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随记 | 2015.06.06',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2015-06-06 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="CODEPLAY0314" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">67</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CODEPLAY0314</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home 主页</span></a></div><div class="menus_item"><a class="site-page" href="/OI&amp;ACM/"><i class="fa-fw fas fa-trophy"></i><span> Programming Contest 算法竞赛</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Share</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fas fa-image"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-info-circle"></i><span> About 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">随记 | 2015.06.06</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><p>貌似很久没有写过流水账了，趁高考假的时候比较赋闲扯一下淡；<br>
+…打完一个句子习惯性打上一个分号；<br>
+这周开始了图论，然而我并是感觉没跟上节奏。其实从LCA开始就是。<br>
+…反正是扯淡，我想到哪里就写到哪里好了。</p>
+<p>先总结下之前的四个专题:并查集，哈希，树状数组，LCA。总的来说，学的比较好的是前面两个专题。首先觉得那段时间状态比较好吧，刚经历月考的低谷然后就觉得要努力竞赛了，然后搞并查集的时候比较认真，然后TB找的题目深度比较适中，学完就有一种“自己学到很多东西得感觉”，之前我也只有在自己狂刷语言的状态下有过，总之并查集学的不错。<br>
+然而我发现把并查集放在第一个讲简直是最合适的安排没有之一，因为后面的专题好像都用到了，包括图论的强联通分量和最小生成树，所以现在也还觉得非常幸运(?)啊（不知当时是随便安排的吗）。<br>
+然后紧接着哈希也不错，其实一开始没什么感觉，然后通过一些题目慢慢感受到了哈希的一些技巧，紧接着自己也机智地解了几道题，还一时兴起写了篇博客。其实也是因为没去APIO赋闲在校腾出了大量时间刷题，这也说明一个问题，时间还是很关键的（后面我又会提到）。<br>
+树状数组。LFW设计的线路非常单纯啊，就是基础知识+三个运用，题目也很水，虽然很爽地刷完，然而感觉这个坑没有挖很深啊，树状数组一定还有更高级的应用：）另一个坑是，我至今没有理解区间加值中BIT0和BIT1的原理。<br>
+LCA.我最近的堕落就始于这里了。看LCA ppt 的时候很…怎么说，不在状态吧，有“一种算法能不掌握就不掌握”的感觉，然而我就靠Tarjan走天下了。这是个大坑以后一定要补（我是否应该列一个表记下一些大坑？），然后竟然讲完第二天就要交程序了，很多题目没A就交了，然后过后就不想补坑了，搞得很被动，所以一个专题一定要给足时间啊!!!个人觉得慢一点没事，但只要掌握了，以后都不用管了啊，像并查集我觉得这辈子都不会忘… …<br>
+然而浩浩荡荡开始图论。首先一本通真是当头一棒，我并是之前没打过一本通的图论，就过那两三天就都干这事了，加上之前并不好的状态，简直就落入低谷，完全打不动，打完了也不想改。那只好逃避咯–我其实抄了蛮多代码。结果之后强联通分量的题目又是充斥着迷のWA，导致我原本准备好重新开始的决心又被湮灭，抄了代码。这样一看，图论开始并不顺利。而转念一想，之前的这些题目并没有什么章法，现在没有完全会也没关系吧，以后再填坑。这样，我在这两个星期造了这么几个大坑。<br>
+而到最小生成树了。我从一个月前接到讲课的任务，不知怎么就选了最小生成树，自己开始搞后，其实发现有很多东西，我适当的加深了难度，然后自己也看了很多题，应该是学的比较好。那几天都干这些事去了，这也是导致LCA期间我状态不好的原因之一吧。然而我自己懂了之后，发现又两个很严重的问题：我并是没有打过一道题目，而且我并没有想好怎么讲课。其实后面打一本通的时候发现真得很好打，于是就决定跟他们一起打了。然后cy问我做过没有的时候我就口糊过去了，其实我是都会做只是没打（然而并没有什么卵用)。然后就是讲课的问题，自认为ppt上的思路很清晰了，然后主要心思就放在了特效上，做了很久了，到今天讲课的时候我发现忘掉好多东西了…应该再看一看的，尤其是开始两道例题，第一题我感觉我的疑问跟大家差不多，第二问我是确实没有太明白，当事也没太管，不过知道它的思路，我就这么强行口糊下去了，之后也口糊了不少地方…总之算比较失败把这次…然而其实我认为我一直以来表达能力是比较强的…然后经常就是某个人问题目问别人听不明白问我就明白了…(装逼嫌疑)，然而这次主要的问题大概就是我自己也没懂吧…<br>
+过去的事就总结这么多了，其实我写一遍下来以后并是大概不会看了，只是写出来自己心里有个底，更清楚些。<br>
+说以后的事情。<br>
+从得知六月底可能停课起，我就又有一种想常规弃疗的感觉，实在是大概算算今年的上课时间都不会超过两个月了吧，我当然要更好的搞好竞赛了。<br>
+根据之前的一些问题，有一些改进措施，还有一些新措施。<br>
+首先要调整状态，通过这个假期找回感觉。然后就是一定要拼命了，联赛只有155天，要有些紧张的气氛了，最好向cy了解下进度安排和整体的专题计划。<br>
+每天的任务也有些变化。首先是加入囤题大军。除周六以外，每天至少看五道专题以外的题，最好A两道周六设为囤题日，最好能达到20道吧，先这样，以后有变动再说。然后周日设为填坑日，把本周没弄懂的东西一定解决，不然现在不搞以后就难得搞了，有多的时间再填以前的坑。<br>
+然后平时的就是，尽量压榨一切时间搞竞赛，白天就拿几道题去班上想嘛，然后也不能无脑翘课，就是到了机房也不知道干什么，每天9:30开始写当天总结，还有明日计划，然后进程表要分的更细点，加入囤题/大坑/随记等栏。<br>
+Maya都快2000字了，不知道下次什么时候还能写这么长的随笔，也不早了，那我就睡了。</p>
+<p>–By Foggy</p>
+<p>为了集满两千字：哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2015 - 2022 By Codeplay0314</div><div class="footer_custom_text">Homepage pictures from <a target="_blank" rel="noopener" href="https://beyondvisuals.hk/">Beyond Visuals</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://codeplay0314.com/dairy/2015-06-06.html'
+    this.page.identifier = 'dairy/2015-06-06.html'
+    this.page.title = '随记 | 2015.06.06'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://codeplay0314.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Disqus' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
