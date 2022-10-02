@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codeplay0314.com/articles/2022-04-15/ms-application/</loc>
+    
+    <lastmod>2022-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://codeplay0314.com/photos/index.html</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -23,15 +32,6 @@
     <loc>http://codeplay0314.com/2022-05-07/first-day-of-reopening.html</loc>
     
     <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://codeplay0314.com/articles/2022-04-15/ms-application/</loc>
-    
-    <lastmod>2022-05-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
